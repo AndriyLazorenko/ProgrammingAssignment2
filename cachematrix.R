@@ -1,5 +1,16 @@
 ## Put comments here that give an overall description of what your
 ## functions do
+# These functions handle caching matrices when computing inverses.
+#
+# 1st creates a special object (list) given original matrix that has methods
+# for reading and writing a matrix to it as well as reading and writing
+# inverse of a matrix from it (kinda new class)
+#
+# The 2nd function knows how to deal with this object to compute inverse
+# either from cache of 1st function's object, or using solve() function,
+# if the inverse of a matrix is not cached yet.
+
+
 
 ## Write a short comment describing this function
 
@@ -32,7 +43,7 @@ makeCacheMatrix <- function(x = matrix()) {
 #a matrix and stores it using setinv method from makeCacheMatrix
 #function.
 
-cacheSolve <- function(x, ...) {
+cacheInv <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
     inv <- x$getinv()
     if (!is.null(inv)) {
