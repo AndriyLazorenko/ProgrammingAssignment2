@@ -43,7 +43,7 @@ makeCacheMatrix <- function(x = matrix()) {
 #a matrix and stores it using setinv method from makeCacheMatrix
 #function.
 
-cacheInv <- function(x, ...) {
+cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
     inv <- x$getinv()
     if (!is.null(inv)) {
